@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="NOI（ノイ）として、千葉県でフリーランスのWeb制作・デザイン制作・フロントエンドコーディングを中心に行っています。"
+    />
+    <title>NOI</title>
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.scss" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vivus@0.4.6/dist/vivus.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <div class="container" id="blur">
+      <h1 class="logoBox">
+        <a href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            viewBox="0 0 140 70"
+            class="opening"
+            id="logo-container"
+            role="img"
+            aria-label="NOI"
+          >
+            <g id="logo" class="logo">
+              <g>
+                <polygon
+                  points="38.5 56.8 16.6 56.8 16.6 44.7 7 44.7 7 66.5 38.5 66.5 38.5 56.8"
+                />
+                <path
+                  d="M113.6,57.9h0v8.6h9.6v-33.8c6.6-2.4,11-9.4,9.5-17-1.1-5.9-5.9-10.7-11.8-11.8-5.2-1-10,.7-13.4,3.9-3.8-2.2-8-3.6-12.4-4-12.6-1.3-23.8,4.9-29.9,14.6-5.6-8.9-15.5-14.8-26.7-14.8s-16.2,3.3-21.9,8.8V3.5H7v36.4h9.6v-4.9c0-12.1,9.8-21.9,21.9-21.9s21.9,9.8,21.9,21.9v31.5h9.6v-8.8c4.9,4.8,11.4,8,18.6,8.7,3.5.4,7,0,10.3-.6,5.6-1.3,10.6-4.1,14.7-7.9ZM118.1,11.4c4,0,7.2,3.2,7.2,7.2s-3.2,7.2-7.2,7.2-7.2-3.2-7.2-7.2,3.2-7.2,7.2-7.2ZM92,13.2c4.1,0,7.9,1.1,11.1,3.1-.1.8-.2,1.5-.2,2.3,0,6.8,4.6,12.6,10.8,14.4,0,.7,0,1.3,0,2,0,12.1-9.8,21.8-21.8,21.8s-21.8-9.8-21.8-21.8,9.8-21.8,21.8-21.8Z"
+                />
+              </g>
+            </g>
+          </svg>
+        </a>
+      </h1>
+      <button id="skipButton">SKIP</button>
+
+      <header>
+        <div class="title">
+          <h2>NOI</h2>
+          <h3>GEN✕TEN</h3>
+        </div>
+
+        <nav class="nav">
+          <ul>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li>
+              <a href="#"
+                ><img
+                  src="img/bluesky_media_kit_logo_svgs.svg"
+                  alt="bluesky"
+                  width="32px"
+                  height="32px"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+        <div id="timeMessage" class="timeMessage">&nbsp;</div>
+        <p id="toggleButton" class="video-play"></p>
+      </header>
+      <div class="tonbo">
+        <img src="img/t01.png" alt="" />
+        <img src="img/t02.png" alt="" />
+        <img src="img/t03.png" alt="" />
+        <img src="img/t04.png" alt="" />
+        <img src="img/t05.png" alt="" />
+        <img src="img/t06.png" alt="" />
+        <img src="img/t07.png" alt="" />
+        <img src="img/t08.png" alt="" />
+        <div class="cmyk">
+          <button class="cyan" onclick="changeBackground('#CCFFFF')"></button>
+          <button
+            class="magenta"
+            onclick="changeBackground('#FFE0FF')"
+          ></button>
+          <button class="yellow" onclick="changeBackground('#FFFFCC')"></button>
+          <button class="black" onclick="changeBackground('#bbb')"></button>
+          <button class="white" onclick="changeBackground('#fff')"></button>
+        </div>
+        <div>
+          <div class="scroll-indicator">0%</div>
+        </div>
+      </div>
+
+      <section class="top">
+        <div class="box">
+          <div id="genTen">
+            <h4>原&times;点</h4>
+          </div>
+          <p class="textFade">equal</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="horizontal-section" id="container">
+          <div class="scrollText" id="text">コードにデザインを宿したい。</div>
+        </div>
+      </section>
+      <section id="works">
+        <div class="work-illust" id="work">
+          <h4>Works</h4>
+          <div class="illust" id="workImgS">
+            <img src="img/main.svg" alt="ワーク用のイラスト" />
+          </div>
+        </div>
+        <div class="area js-area">
+          <div class="wrap js-wrap">
+            <div class="work js-item">
+              <div class="imgBox">
+                <img
+                  src="img/work-1.png"
+                  alt="GEN✕TEN"
+                  onclick="loadPopup('works/work-1.html')"
+                />
+              </div>
+              <h5>
+                NOI GEN✕TEN<br /><span>Web | Personal Work - 2025/03/31</span>
+              </h5>
+            </div>
+            <div class="work js-item">
+              <div class="imgBox">
+                <img src="img/work-2.png" alt="" />
+              </div>
+              <h5>
+                ISHIMURA CLINIC<br /><span
+                  >Web | Personal Work - 2025/03/31</span
+                >
+              </h5>
+            </div>
+            <div class="work js-item">
+              <div class="imgBox">
+                <img src="img/work-3.png" alt="" />
+              </div>
+              <h5>KOHRI<br /><span>Web | Personal Work - 2025/03/31</span></h5>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="worksMore" class="slideInRL">
+        <div class="worksMore">
+          <h4>More Works</h4>
+          <ul id="filterButtons">
+            <li data-filter="All">All</li>
+            <li data-filter="Web">Web</li>
+            <li data-filter="Logo">Logo</li>
+            <li data-filter="Package">Package</li>
+          </ul>
+          <div class="worksMoreFlex">
+            <div class="item Web"><img src="img/work-0.png" alt="" /></div>
+            <!-- <div class="item Web"><img src="img/web.png" alt="" /></div> -->
+            <!-- <div class="item Logo"><img src="img/logo.png" alt="" /></div> -->
+            <!-- <div class="item Web"><img src="img/web.png" alt="" /></div> -->
+            <!-- <div class="item Package"><img src="img/package.png" alt="" /></div> -->
+            <!-- <div class="item Web"><img src="img/web.png" alt="" /></div> -->
+            <!-- <div class="item Web"><img src="img/web.png" alt="" /></div> -->
+            <!-- <div class="item Logo"><img src="img/logo.png" alt="" /></div> -->
+            <!-- <div class="item Web"><img src="img/web.png" alt="" /></div> -->
+            <!-- <div class="item Package"><img src="img/package.png" alt="" /></div> -->
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="about slideInLR">
+          <h4>私について</h4>
+          <div class="aboutFlex">
+            <div class="leftBox">
+              <h5>千葉県でフリーランスのWeb制作・デザイン制作をしています。</h5>
+              <p>
+                NOI（ノイ）として、千葉県でフリーランスのWeb制作・デザイン制作・フロントエンドコーディングを中心に行っている、イシムラノリヒトです。<br /><br />
+                私はシンプルで伝わりやすいデザインを心がけ、目的に応じた表現を大切にしています。Webサイトのデザイン制作から、ロゴ・印刷物のデザイン、HTML/CSS・JavaScriptを活用したコーディングまで幅広く対応可能です。<br /><br />
+              </p>
+            </div>
+            <dl class="rightBox">
+              <img src="img/main.svg" alt="" />
+              <div class="about-box">
+                <div>
+                  <dt>名称</dt>
+                  <dd>NOI（ノイ）</dd>
+                </div>
+                <div>
+                  <dt>所在地</dt>
+                  <dd>千葉県市川市</dd>
+                </div>
+                <div>
+                  <dt>お問い合わせ</dt>
+                  <dd>@gmail.com</dd>
+                </div>
+                <div>
+                  <dt>事業内容</dt>
+                  <dd>
+                    Webサイト・印刷物のデザイン制作、Webサイトのコーディング業務
+                  </dd>
+                </div>
+                <div>
+                  <dt>PC</dt>
+                  <dd>macOS</dd>
+                </div>
+                <div>
+                  <dt>デザインツール</dt>
+                  <dd>Illustrator、Photoshop、他</dd>
+                </div>
+                <div>
+                  <dt>趣味</dt>
+                  <dd>映画、音楽、アニメ、漫画、ベース</dd>
+                </div>
+              </div>
+            </dl>
+            <div class="aboutFlex2">
+              <img src="img/logo.svg" alt="" />
+              <h5 class="aboutCc">
+                「伝えたい事を、より分かりやすく効果的に。」<br /><span
+                  >その想いを込めて、デザインしています。</span
+                >
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="design slideInRL2">
+          <h4>デザインについて</h4>
+          <div class="contentBox">
+            <h5>シンプルで伝わるデザイン</h5>
+            <p>
+              良いデザインとは、ただ見た目が美しいだけでなく、「伝わること」や「心地よいこと」だと考えています。複雑な情報を整理して、シンプルな形に落とし込むことで、誰でも直感的に理解できるデザインを目指しています。<br />
+              大切にしているのは、使う人が自然に「理解しやすい」「気持ちが良い」と感じられるデザイン。情報を並べるだけではなく、どこに注目してほしいか、どう動けばスムーズに伝わるかを意識して作り上げています。<br />
+              また、視覚的な印象だけでなく、実際に使ったときの心地よさも大事にしています。デザインが持つ本来の意味をしっかりと捉え、ただの装飾ではなく、目的に合った形で提供できるよう心がけています。<br />
+            </p>
+            <h5>「背景」と「経験」</h5>
+            <p>
+              元々、テキスタイルデザイナー・グラフィックデザイナーとしてインテリア業界（寝装寝具）でデザイン業務に就いていました。その後、進行管理の経験を通じて、プロジェクト全体をスムーズに進める力を養いました。デザインだけでなく、どんな風に進行していくかにも目を向けて、効率的に仕上げることを大切にしています。<br />
+              この経験から、デザインはもちろん、全体の調和やタイミングを考えることが、良い結果に繋がると実感しています。そのため、デザインの各段階を見守りながら、円滑にプロジェクトを進めることを心がけています。
+            </p>
+          </div>
+        </div>
+        <div class="item cording slideInLR2">
+          <h4>コーディングについて</h4>
+          <div class="contentBox">
+            <h5>「忠実さ」と「柔軟性」</h5>
+            <p>
+              コーディングは、デザインに命を吹き込む工程です。デザインを正確に再現するだけでなく、ユーザーにとって快適でスムーズな体験を提供することを重視しています。<br />
+              私は、デザインの意図を汲み取りながら、レスポンシブ対応やアニメーションの最適化、パフォーマンスの向上など、細部までこだわりを持って実装します。また、柔軟な対応を心がけ、状況に応じた最適な表現を追求します。<br /><br />
+              目的は「コードにデザインを宿したい。」<br /><br />
+              動きや使い心地まで含めたデザインのあるべき姿を形にしていきます。
+            </p>
+            <h5>スキル</h5>
+            <dl class="skillBox">
+              <div>
+                <dt>HTML・CSS・SCSS</dt>
+                <dd>レスポンシブデザイン対応、SCSSを活用したスタイリング</dd>
+              </div>
+              <div>
+                <dt>JavaScript・jQuery</dt>
+                <dd>
+                  動的効果、インタラクティブ要素の実装、GSAPによるアニメーション実装
+                </dd>
+              </div>
+              <div>
+                <dt>WordPress</dt>
+                <dd>オリジナルテーマの作成、プラグインの導入と設定</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+      <footer id="end">
+        <small>&copy; 2025 NOI</small>
+      </footer>
+    </div>
+    <!-- ポップアップ -->
+    <div id="popup-content">
+      <button id="close-popup" onclick="closePopup()">Close</button>
+      <div class="popup-inner"></div>
+    </div>
+    <script>
+      // リロード時の位置をトップに
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+      window.scrollTo(0, 0);
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // VivusでSVGアニメーションを作成
+        // 初回判定用フラグ
+        const isFirstVisit = sessionStorage.getItem("isFirstVisit") === null;
+
+        // svgのチラつき防止
+        const logoContainer = document.getElementById("logo-container");
+        logoContainer.style.display = "block";
+
+        // 共通処理
+        const hideElements = () => {
+          document
+            .querySelectorAll(
+              ".nav, .timeMessage,.cmyk,.tonbo,.video-play,.scroll-indicator"
+            )
+            .forEach((el) => (el.style.visibility = "hidden"));
+        };
+
+        const showElements = () => {
+          document
+            .querySelectorAll(
+              ".nav, .timeMessage,.cmyk,.tonbo,.video-play,.scroll-indicator"
+            )
+            .forEach((el) => (el.style.visibility = "visible"));
+        };
+
+        const setupHorizontalScroll = (container, text) => {
+          const textWidth = text.scrollWidth;
+          const viewportWidth = window.innerWidth;
+          const horizontalScrollDistance = textWidth - viewportWidth;
+
+          ScrollTrigger.create({
+            trigger: container,
+            start: "top top",
+            end: () => `+=${horizontalScrollDistance * 2}`,
+            pin: true,
+            scrub: true,
+            onUpdate: (self) => {
+              gsap.to(text, {
+                x: -self.progress * horizontalScrollDistance,
+                ease: "none",
+                duration: 0.1,
+              });
+            },
+          });
+        };
+
+        const setupMobileTextAnimation = (container, text) => {
+          const textContent = text.textContent.trim(); // 余計な空白を削除
+          text.innerHTML = ""; // 元のテキストをクリア
+
+          // 一文字ずつ <span> で囲み、text に追加
+          const spans = textContent.split("").map((char, i) => {
+            const span = document.createElement("span");
+            span.textContent = char;
+            span.style.display = "inline-block"; // GSAP適用のため
+            span.style.opacity = "0"; // 初期状態を非表示
+            span.style.position = "relative"; // アニメーション時の基準
+            text.appendChild(span);
+            return span;
+          });
+
+          // 一括でスライドインのアニメーションを設定
+          gsap.to(spans, {
+            scrollTrigger: {
+              trigger: container,
+              start: "top 100%", // 80%の位置から開始
+              end: "bottom 20%", // 20%の位置で終了
+              scrub: true, // スクロールに応じて動く
+            },
+            opacity: 1,
+            stagger: 0.05, // 文字ごとに遅延をつける
+            x: 0, // 画面内に戻す
+            ease: "power3.out",
+            duration: 1,
+          });
+
+          // 各文字を左右交互にスライドイン
+          gsap.fromTo(
+            spans,
+            {
+              x: (i) => (i % 2 === 0 ? "-100vw" : "100vw"), // 偶数: 左から、奇数: 右から
+            },
+            {
+              x: "0%",
+              duration: 1,
+              stagger: 0.1,
+              scrollTrigger: {
+                trigger: container,
+                start: "top 100%",
+                end: "bottom 50%",
+                scrub: true,
+              },
+              ease: "power1.out",
+            }
+          );
+        };
+
+        const setupHorizontalScrollImage = () => {
+          const area = document.querySelector(".js-area");
+          const wrap = document.querySelector(".js-wrap");
+          const items = document.querySelectorAll(".js-item");
+          const num = items.length;
+
+          if (area && wrap && items.length > 0) {
+            gsap.registerPlugin(ScrollTrigger);
+
+            if (window.innerWidth <= 580) {
+              // ✅ スマホ時のアニメーション
+              gsap.set(wrap, {
+                width: "100%",
+              });
+
+              gsap.set(items, {
+                width: "100%",
+                opacity: 0,
+                y: 50,
+                rotate: -45, // 初期状態で少し回転
+                scale: 0.1, // 初期状態で少し縮小
+                height: 33 + "vh",
+                marginBottom: 20 + "px",
+              });
+
+              items.forEach((item, index) => {
+                gsap.to(item, {
+                  opacity: 1,
+                  y: 0,
+                  rotate: 0, // ゆっくり回転しながら元の角度へ
+                  scale: 1, // 拡大しながら通常サイズへ
+                  duration: 1.2, // 少し長めのアニメーション
+                  delay: index * 0.3, // 順番に出てくるように遅延
+                  ease: "power2.out",
+                  scrollTrigger: {
+                    trigger: item,
+                    start: "top 85%", // 85% 画面内に入ったら発火
+                    toggleActions: "play none none reverse",
+                  },
+                });
+              });
+            } else {
+              // ✅ PCの横スクロールアニメーション
+              gsap.set(wrap, { width: num * 100 + "%", marginLeft: "10%" });
+              gsap.set(items, { width: 100 / num + "%" });
+
+              gsap.to(items, {
+                xPercent: -100 * (num - 1) - 10, // 30% 分のズレを補正
+                ease: "none",
+                scrollTrigger: {
+                  trigger: area,
+                  start: "top",
+                  end: "+=6000",
+                  pin: true,
+                  scrub: true,
+                },
+              });
+            }
+          }
+        };
+
+        // イラストアニメーションの処理
+        function setupIllustAnimation() {
+          const illust = document.querySelector(".illust");
+
+          if (illust) {
+            gsap.set(illust, { opacity: 0, x: "100vw", rotation: 180 });
+
+            gsap.to(illust, {
+              scrollTrigger: {
+                trigger: "#workImgS",
+                start: "top 90%",
+                end: "top 50%",
+                scrub: 1,
+                markers: false,
+              },
+              x: 0,
+              rotation: 360,
+              opacity: 1,
+            });
+          }
+        }
+
+        if (isFirstVisit) {
+          // スキップボタンを表示する
+          const skipButton = document.getElementById("skipButton");
+          if (skipButton) {
+            skipButton.style.display = "block"; // ボタンを表示
+            skipButton.addEventListener("click", function () {
+              sessionStorage.setItem("isFirstVisit", "false");
+              location.reload(); // ページをリロード
+            });
+          }
+
+          document.documentElement.style.overflowY = "hidden"; // 縦スクロールを無効化
+          hideElements(); // 初回訪問時の非表示
+
+          // Vivusのアニメーションを開始
+          new Vivus(
+            "logo",
+            {
+              type: "delayed",
+              duration: 150,
+              forceRender: false,
+            },
+            function (obj) {
+              obj.el.classList.add("done");
+
+              const moveDelay = 1000;
+              const mainActivateDelay = 3000;
+
+              setTimeout(() => {
+                if (logoContainer) {
+                  logoContainer.classList.add("moveFin");
+                }
+              }, moveDelay);
+
+              setTimeout(() => {
+                const logoBox = document.querySelector(".logoBox");
+                if (logoBox) {
+                  logoBox.style.height = "0";
+                  logoBox.style.transition = "height 1.2s ease";
+                }
+              }, mainActivateDelay);
+
+              setTimeout(() => {
+                document.documentElement.style.overflowY = "auto"; // 縦スクロールを有効化
+                showElements(); // 初回の表示
+                const container = document.getElementById("container");
+                const text = document.getElementById("text");
+
+                const isMobile =
+                  window.matchMedia("(max-width: 580px)").matches;
+
+                if (!isMobile && container && text) {
+                  setupHorizontalScroll(container, text);
+                } else if (text) {
+                  setupMobileTextAnimation(container, text);
+                }
+              }, mainActivateDelay + 1200); // 1秒後に実行
+
+              setTimeout(() => {
+                setupHorizontalScrollImage(); // 初回の横スクロール画像
+              }, mainActivateDelay + 1200);
+
+              setTimeout(() => {
+                setupIllustAnimation(); // 初回のイラスト回転
+              }, mainActivateDelay + 1200);
+
+              // Vivusアニメーション終了後にスキップボタンを非表示
+              setTimeout(() => {
+                if (skipButton) {
+                  skipButton.style.display = "none"; // Vivus終了後に非表示
+                }
+              }, mainActivateDelay); // アニメーション終了後に非表示 (時間調整)
+
+              sessionStorage.setItem("isFirstVisit", "false");
+            }
+          );
+        } else {
+          // それ以降は常に表示
+          showElements();
+          if (logoContainer) {
+            logoContainer.classList.add("moveFin");
+          }
+
+          const logoBox = document.querySelector(".logoBox");
+          if (logoBox) {
+            logoBox.style.height = "0";
+          }
+
+          const container = document.getElementById("container");
+          const text = document.getElementById("text");
+          const isMobile = window.matchMedia("(max-width: 580px)").matches;
+
+          if (!isMobile && container && text) {
+            setupHorizontalScroll(container, text);
+          } else if (text) {
+            setupMobileTextAnimation(container, text);
+          }
+
+          setupHorizontalScrollImage(); // ２回目の横スクロール画像
+          setupIllustAnimation(); // ２回目のイラスト回転
+        }
+      });
+    </script>
+    <script>
+      // 文字のランダム
+      document.addEventListener("DOMContentLoaded", () => {
+        const text = document.querySelector("#genTen h4");
+        const originalText = text.textContent;
+        text.textContent = "";
+
+        const spans = Array.from(originalText).map((char) => {
+          const span = document.createElement("span");
+          span.textContent = char;
+          text.appendChild(span);
+          return span;
+        });
+
+        function randomize() {
+          const randomIndex = Math.floor(Math.random() * spans.length);
+          const windowWidth = window.innerWidth;
+          const marginValue = windowWidth <= 580 ? 40 : 0;
+
+          spans.forEach((span, index) => {
+            const waveEffect =
+              Math.sin((index / spans.length) * Math.PI * 2) * 10;
+            const x = Math.random() * 120 - 10 - marginValue;
+            const y = Math.random() * 120 - 10 + waveEffect;
+            const rotation = Math.random() * 40 - 10;
+            const scale =
+              index === randomIndex ? 1 + (Math.random() * 1.9 - 0.15) : 1;
+            const opacity = index === randomIndex ? 1.0 : 0.3;
+
+            gsap.to(span, {
+              x,
+              y,
+              rotation,
+              scale,
+              opacity,
+              duration: 3,
+              ease: "power1.inOut",
+            });
+          });
+
+          requestAnimationFrame(() => setTimeout(randomize, 3000));
+        }
+
+        randomize();
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const buttons = document.querySelectorAll("#filterButtons li");
+        const items = document.querySelectorAll(".worksMoreFlex .item");
+
+        buttons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const filter = this.getAttribute("data-filter");
+
+            items.forEach((item) => {
+              // アイテムを一度非表示にする
+              item.classList.add("hidden");
+
+              // 少し遅延させてから表示/非表示を切り替える
+              setTimeout(() => {
+                if (filter === "All" || item.classList.contains(filter)) {
+                  // 表示するアイテムにアニメーションを追加
+                  item.classList.remove("hidden");
+                }
+              }, 400); // アニメーションの時間に合わせて遅延（0.4秒）
+            });
+          });
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let moveDelay;
+
+        // 初回訪問時の遅延時間設定
+        const isFirstVisit = sessionStorage.getItem("isFirstVisit") === null;
+        if (isFirstVisit) {
+          moveDelay = 6500;
+        } else {
+          moveDelay = 0;
+        }
+
+        let isDisplaying = false; // メッセージの初期状態は停止
+        let formattedTime = ""; // 時間を保存する変数
+
+        // 時間を更新する関数
+        function updateTime() {
+          const now = new Date();
+          const japanTime = new Date(
+            now.toLocaleString("en-US", { timeZone: "Asia/Tokyo" })
+          );
+          formattedTime = japanTime.toLocaleTimeString("ja-JP", {
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: false,
+          });
+
+          // 時刻は常に表示
+          const timeElement = document.getElementById("formattedTime");
+          if (timeElement) {
+            timeElement.innerText = `TOKYO ${formattedTime}`;
+          }
+        }
+
+        // 時間を1秒ごとに更新
+        setInterval(updateTime); // 時間の更新を常に行う
+
+        setTimeout(() => {
+          // メッセージ表示
+          function displayMessage() {
+            if (!isDisplaying) return; // メッセージが表示されていない場合は何もしない
+
+            const now = new Date();
+            const japanTime = new Date(
+              now.toLocaleString("en-US", { timeZone: "Asia/Tokyo" })
+            );
+            const hour = japanTime.getHours();
+
+            let message = "";
+            if (hour >= 5 && hour < 12) {
+              message =
+                "おはようございます。\nデザイナーのノイです。\nウェブ・デザイン制作を行っています。\nシンプルで伝わるデザインを大切にし、\n目的に応じた表現で、想いを形にします。\nウェブ・ロゴ・印刷物のデザインから、\nHTML・CSS・JSでのコーディングまで。\n伝えたい事を、より分かりやすく効果的に。";
+            } else if (hour >= 12 && hour < 18) {
+              message =
+                "こんにちは。\nデザイナーのノイです。\nウェブ・デザイン制作を行っています。\nシンプルで伝わるデザインを大切にし、\n目的に応じた表現で、想いを形にします。\nウェブ・ロゴ・印刷物のデザインから、\nHTML・CSS・JSでのコーディングまで。\n伝えたい事を、より分かりやすく効果的に。";
+            } else {
+              message =
+                "こんばんは。\nデザイナーのノイです。\nウェブ・デザイン制作を行っています。\nシンプルで伝わるデザインを大切にし、\n目的に応じた表現で、想いを形にします。\nウェブ・ロゴ・印刷物のデザインから、\nHTML・CSS・JSでのコーディングまで。\n伝えたい事を、より分かりやすく効果的に。";
+            }
+
+            const lines = message.split("\n");
+            let currentLine = 0;
+            let charIndex = 0;
+
+            function showNextLine() {
+              if (!isDisplaying) return;
+
+              if (currentLine >= lines.length) {
+                currentLine = 0;
+                charIndex = 0;
+              }
+
+              const messageContainer = document.getElementById("timeMessage");
+              messageContainer.innerHTML = `<p id="formattedTime">TOKYO ${formattedTime}</p><p id="animatedText"></p>`;
+
+              const line = lines[currentLine];
+              const animatedText = document.getElementById("animatedText");
+
+              animatedText.style.display = "inline-block";
+              let lineLength = line.length;
+
+              function showNextChar() {
+                if (!isDisplaying) return;
+
+                if (charIndex < lineLength) {
+                  const span = document.createElement("span");
+                  span.textContent = line[charIndex];
+                  span.style.opacity = "0";
+                  span.style.transition = "opacity 0.5s ease-in";
+                  animatedText.appendChild(span);
+
+                  setTimeout(() => {
+                    span.style.opacity = "1";
+                  }, charIndex * 150);
+
+                  charIndex++;
+                  setTimeout(showNextChar, 150);
+                } else {
+                  currentLine++;
+                  charIndex = 0;
+                  setTimeout(showNextLine, 5000); // 次の行に進む前に5秒待機
+                }
+              }
+
+              showNextChar();
+            }
+
+            showNextLine();
+          }
+
+          // 停止・再生テキストの動作
+          document
+            .getElementById("toggleButton")
+            .addEventListener("click", function () {
+              if (isDisplaying) {
+                isDisplaying = false;
+                document.getElementById(
+                  "timeMessage"
+                ).innerHTML = `<p id="formattedTime">TOKYO ${formattedTime}</p><p style="width: 50%">&nbsp;</p>`;
+                this.classList.remove("video_pause");
+                this.classList.add("video-play");
+              } else {
+                isDisplaying = true;
+                displayMessage();
+                this.classList.remove("video-play");
+                this.classList.add("video_pause");
+              }
+            });
+
+          // 最初にメッセージを停止した状態で表示
+          document.getElementById(
+            "timeMessage"
+          ).innerHTML = `<p id="formattedTime">TOKYO ${formattedTime}</p><p style="width: 50%">&nbsp;</p>`;
+        }, moveDelay);
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let moveDelay;
+
+        const isFirstVisit = sessionStorage.getItem("isFirstVisit") === null;
+        if (isFirstVisit) {
+          moveDelay = 9500;
+        } else {
+          moveDelay = 0;
+        }
+
+        gsap.registerPlugin(ScrollTrigger);
+        setTimeout(() => {
+          gsap.utils.toArray(".slideInRL, .slideInRL2").forEach((el) => {
+            gsap.fromTo(
+              el,
+              { x: 200, y: -100, opacity: 0 }, // 初期状態
+              {
+                x: 0,
+                y: 0,
+                opacity: 1, // スライドイン
+                duration: 1,
+                ease: "power1.out",
+                scrollTrigger: {
+                  trigger: el,
+                  start: "top 40%", // 画面の60%の位置で開始
+                  end: "top 0%",
+                  scrub: true,
+                  toggleActions: "play none reverse none",
+                  // markers: true,
+                },
+              }
+            );
+          });
+        }, moveDelay);
+        setTimeout(() => {
+          gsap.utils.toArray(".slideInLR, .slideInLR2").forEach((el) => {
+            gsap.fromTo(
+              el,
+              { x: -200, y: -100, opacity: 0 }, // 初期状態
+              {
+                x: 0,
+                y: 0,
+                opacity: 1, // スライドイン
+                duration: 1,
+                ease: "power1.out",
+                scrollTrigger: {
+                  trigger: el,
+                  start: "top 40%", // 画面の60%の位置で開始
+                  end: "top 0%",
+                  scrub: true,
+                  toggleActions: "play none reverse none",
+                  // markers: true,
+                },
+              }
+            );
+          });
+        }, moveDelay);
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let moveDelay =
+          sessionStorage.getItem("isFirstVisit") === null ? 9500 : 0;
+
+        if (moveDelay === 9500) {
+          sessionStorage.setItem("isFirstVisit", "false");
+        }
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        const logo = document.getElementById("logo-container");
+
+        setTimeout(() => {
+          // 1つ目のスクロールトリガー（通常の動き）
+          const firstScrollTrigger = ScrollTrigger.create({
+            trigger: ".work-illust",
+            start: "top 60%",
+            end: "top 10%",
+            scrub: 1,
+            onEnter: () => {
+              gsap.to(logo, {
+                duration: 0.3,
+                left: "-28px", // ロゴの初期位置に戻す
+                top: "48px", // ロゴの初期位置に戻す
+                scale: 0.4, // 初期のスケールに戻す
+                rotation: 90, // 初期の回転角度に戻す
+                ease: "power2.inOut",
+                force3D: true,
+              });
+            },
+            onLeaveBack: () => {
+              gsap.to(logo, {
+                duration: 0.3,
+                scale: 1, // 元のスケールに戻す
+                top: "49px", // 元の位置に戻す
+                left: "36px", // 元の位置に戻す
+                x: "0%",
+                y: "0%",
+                rotation: 0, // 元の角度に戻す
+                ease: "power2.out",
+                force3D: true,
+              });
+            },
+          });
+
+          // 2つ目のスクロールトリガー
+          const secondScrollTrigger = ScrollTrigger.create({
+            trigger: "#end",
+            start: "top 50%",
+            end: "top 10%",
+            scrub: 1,
+            toggleActions: "play none none reverse",
+            invalidateOnRefresh: true, // スクロールリフレッシュ後に状態をリセット
+            onEnter: () => {
+              const windowWidth = window.innerWidth;
+              const scaleValue = windowWidth <= 580 ? 3 : 5; // 580px以下なら3倍、それ以上なら5倍
+
+              gsap.to(logo, {
+                duration: 0.3,
+                scale: scaleValue,
+                top: "50%",
+                left: "50%",
+                x: "-50%",
+                y: "-50%",
+                rotation: "+=270",
+                transformOrigin: "50% 50%",
+                ease: "power2.out",
+                immediateRender: false,
+                force3D: true,
+              });
+            },
+
+            onLeaveBack: () => {
+              gsap.to(logo, {
+                duration: 0.3,
+                left: "14px", // ロゴの初期位置に戻す
+                top: "79px", // ロゴの初期位置に戻す
+                scale: 0.4, // 初期のスケールに戻す
+                rotation: "+=450", // 初期の回転角度に戻す
+                ease: "power2.inOut",
+                force3D: true,
+              });
+            },
+          });
+
+          // スクロール位置が変更された際に両方のスクロールトリガーを強制的にリセットする
+          ScrollTrigger.addEventListener("refresh", () => {
+            firstScrollTrigger.refresh();
+            secondScrollTrigger.refresh();
+          });
+        }, moveDelay);
+      });
+    </script>
+    <script>
+      // ポップアップ
+      function loadPopup(file) {
+        fetch(file)
+          .then((response) => response.text())
+          .then((data) => {
+            document.querySelector(".popup-inner").innerHTML = data;
+            document.getElementById("popup-content").style.display = "block";
+            document.getElementById("blur").classList.add("blur"); // ブラー効果を追加
+          })
+          .catch((err) => {
+            console.error("ファイルの読み込みに失敗しました", err);
+          });
+      }
+
+      // ポップアップを閉じる
+      function closePopup() {
+        document.getElementById("popup-content").style.display = "none";
+        document.getElementById("blur").classList.remove("blur"); // ブラー効果を削除
+      }
+    </script>
+    <script>
+      // 背景色を変更する関数
+      function changeBackground(color) {
+        // requestAnimationFrame内で背景色変更を一度に実行
+        requestAnimationFrame(() => {
+          document.body.style.backgroundColor = color;
+          document.documentElement.style.backgroundColor = color;
+        });
+      }
+    </script>
+    <script>
+      // 内部リンク対策
+      window.addEventListener("hashchange", function () {
+        history.replaceState(null, null, window.location.pathname);
+      });
+    </script>
+    <script>
+      function updateScrollIndicator() {
+        const scrollTop = window.scrollY;
+        const docHeight =
+          document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        document.querySelector(".scroll-indicator").textContent = `${Math.round(
+          scrollPercent
+        )}%`;
+      }
+
+      window.addEventListener("scroll", updateScrollIndicator);
+    </script>
+    <script>
+      // ページのHTMLが読み込まれてから実行
+      document.addEventListener("DOMContentLoaded", function () {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const mediaQuery = window.matchMedia("(max-width: 580px)");
+
+        function setupAnimation() {
+          if (mediaQuery.matches) {
+            console.log("ScrollTrigger 設定中（スマホ）");
+
+            gsap.set(".textFade", { opacity: 0, scale: 3 }); // 初期状態を透明に設定
+
+            gsap.to(".textFade", {
+              opacity: 1,
+              duration: 1,
+              scale: 1,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: ".textFade",
+                start: "top 50%",
+                end: "top 0%",
+                toggleActions: "play none reverse none",
+              },
+            });
+          }
+        }
+
+        // 初回実行
+        setupAnimation();
+
+        // 画面サイズ変更時にも適用（念のため）
+        mediaQuery.addEventListener("change", setupAnimation);
+      });
+    </script>
+  </body>
+</html>
