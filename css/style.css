@@ -449,6 +449,7 @@ h5 {
     font-size: 5rem;
     writing-mode: vertical-rl;
     margin: 0 auto;
+    width: 5rem;
   }
 }
 .container .area {
