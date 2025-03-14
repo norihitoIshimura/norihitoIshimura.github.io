@@ -805,6 +805,32 @@
         }
 
         gsap.registerPlugin(ScrollTrigger);
+
+        setTimeout(() => {
+          gsap.utils.toArray(".slideInCenter").forEach((el) => {
+            gsap.fromTo(
+              el,
+              { x: 0, y: 0, opacity: 0, scale: 4 }, // 初期状態
+              {
+                x: 0,
+                y: 0,
+                opacity: 1, // スライドイン
+                scale: 1.5,
+                duration: 1,
+                ease: "power1.out",
+                scrollTrigger: {
+                  trigger: el,
+                  start: "top 80%", // 画面の60%の位置で開始
+                  end: "top 0%",
+                  scrub: true,
+                  toggleActions: "play none reverse none",
+                  // markers: true,
+                },
+              }
+            );
+          });
+        }, moveDelay - 3000);
+
         setTimeout(() => {
           gsap.utils.toArray(".slideInRL, .slideInRL2").forEach((el) => {
             gsap.fromTo(
@@ -851,30 +877,6 @@
             );
           });
         }, moveDelay);
-        setTimeout(() => {
-          gsap.utils.toArray(".slideInCenter").forEach((el) => {
-            gsap.fromTo(
-              el,
-              { x: 0, y: 0, opacity: 0, scale: 4 }, // 初期状態
-              {
-                x: 0,
-                y: 0,
-                opacity: 1, // スライドイン
-                scale: 1.5,
-                duration: 1,
-                ease: "power1.out",
-                scrollTrigger: {
-                  trigger: el,
-                  start: "top 80%", // 画面の60%の位置で開始
-                  end: "top 0%",
-                  scrub: true,
-                  toggleActions: "play none reverse none",
-                  // markers: true,
-                },
-              }
-            );
-          });
-        }, moveDelay - 3000);
       });
     </script>
     <script>
