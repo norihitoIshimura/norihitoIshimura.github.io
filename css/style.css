@@ -446,7 +446,7 @@ h5 {
 }
 @media screen and (max-width: 580px) {
   .container .box p {
-    font-size: 5rem;
+    font-size: 8rem;
     writing-mode: vertical-rl;
     margin: 0 auto;
     width: 5rem;
