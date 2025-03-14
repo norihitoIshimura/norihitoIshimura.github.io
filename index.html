@@ -108,7 +108,7 @@
           <div id="genTen">
             <h4>原&times;点</h4>
           </div>
-          <p class="slideInCenter">equal</p>
+          <p class="textFade">equal</p>
         </div>
       </section>
 
@@ -851,30 +851,6 @@
             );
           });
         }, moveDelay);
-        setTimeout(() => {
-          gsap.utils.toArray(".slideInCenter").forEach((el) => {
-            gsap.fromTo(
-              el,
-              { x: 0, y: 0, opacity: 0, scale: 4 }, // 初期状態
-              {
-                x: 0,
-                y: 0,
-                opacity: 1, // スライドイン
-                scale: 1,
-                duration: 1,
-                ease: "power1.out",
-                scrollTrigger: {
-                  trigger: el,
-                  start: "top 80%", // 画面の60%の位置で開始
-                  end: "top 0%",
-                  scrub: true,
-                  toggleActions: "play none reverse none",
-                  // markers: true,
-                },
-              }
-            );
-          });
-        }, moveDelay);
       });
     </script>
     <script>
@@ -1020,6 +996,41 @@
       }
 
       window.addEventListener("scroll", updateScrollIndicator);
+    </script>
+    <script>
+      // ページのHTMLが読み込まれてから実行
+      document.addEventListener("DOMContentLoaded", function () {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const mediaQuery = window.matchMedia("(max-width: 580px)");
+
+        function setupAnimation() {
+          if (mediaQuery.matches) {
+            console.log("ScrollTrigger 設定中（スマホ）");
+
+            gsap.set(".textFade", { opacity: 0, scale: 3 }); // 初期状態を透明に設定
+
+            gsap.to(".textFade", {
+              opacity: 1,
+              duration: 1,
+              scale: 1,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: ".textFade",
+                start: "top 50%",
+                end: "top 0%",
+                toggleActions: "play none reverse none",
+              },
+            });
+          }
+        }
+
+        // 初回実行
+        setupAnimation();
+
+        // 画面サイズ変更時にも適用（念のため）
+        mediaQuery.addEventListener("change", setupAnimation);
+      });
     </script>
   </body>
 </html>
